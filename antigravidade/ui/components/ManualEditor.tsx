@@ -14,13 +14,6 @@ interface ManualEditorProps {
   isSaving: boolean;
 }
 
-const formatters: Record<string, { prefix: string; suffix: string }> = {
-  bold: { prefix: '**', suffix: '**' },
-  italic: { prefix: '*', suffix: '*' },
-  heading: { prefix: '\n\n## ', suffix: '\n' },
-  checklist: { prefix: '\n- [ ] ', suffix: '' },
-};
-
 const ManualEditor: React.FC<ManualEditorProps> = ({
   document,
   draft,
@@ -36,11 +29,13 @@ const ManualEditor: React.FC<ManualEditorProps> = ({
 
   const textAreaRef = useRef<HTMLTextAreaElement | null>(null);
   const editorValue = draft?.content ?? document.manualContent ?? document.content ?? '';
+  
   const friendlyDate = draft?.updatedAt
     ? new Date(draft.updatedAt).toLocaleString()
     : document.manualDocxPath
     ? 'Sincronizado com pipeline'
     : 'Nunca salvo';
+    
   const statusEntries = [
     { label: 'ADK', value: systemStatus.adk },
     { label: 'Whisper', value: systemStatus.whisper },
@@ -83,8 +78,8 @@ const ManualEditor: React.FC<ManualEditorProps> = ({
       {/* Document Canvas */}
       <div className="flex-1 overflow-y-auto p-8 custom-scrollbar flex justify-center">
         <div className="w-full max-w-[210mm] bg-white shadow-lg min-h-[297mm] flex flex-col relative">
-          {/* Bosch Header Stripe */}
-          <div className="h-2 w-full bg-gradient-to-r from-[#920818] via-[#E20015] to-[#920818]"></div>
+          {/* Bosch Header Stripe (Blue) */}
+          <div className="h-2 w-full bg-gradient-to-r from-[#005691] via-[#008ECF] to-[#005691]"></div>
           
           <textarea
             ref={textAreaRef}
