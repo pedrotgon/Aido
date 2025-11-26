@@ -1,0 +1,1 @@
+(self, parent_context: 'InvocationContext') -> 'AsyncGenerator[Event, None]'

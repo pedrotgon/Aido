@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+
+# Frontend
+node_modules/
+dist/
+.DS_Store
+
+# Dados (Ignorar arquivos grandes de mídia, manter estrutura)
+antigravidade/data/entrada/*
+!antigravidade/data/entrada/.gitkeep
+antigravidade/data/saida/docx/*
+!antigravidade/data/saida/docx/.gitkeep
+antigravidade/data/saida/pdf/*
+!antigravidade/data/saida/pdf/.gitkeep
+antigravidade/data/saida/txt/*
+!antigravidade/data/saida/txt/.gitkeep
+
+# Logs e Temporários
+*.log
+tmp/

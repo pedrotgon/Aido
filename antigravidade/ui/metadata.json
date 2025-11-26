@@ -1,0 +1,7 @@
+{
+  "name": "Aido - Intelligent Document Automation",
+  "description": "A robust document automation platform leveraging Gemini models for transcription, analysis, and intelligent chat. Integrates simulated Microsoft SSO and local processing workflows.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

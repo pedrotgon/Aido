@@ -1,0 +1,9 @@
+google-adk
+fastapi
+uvicorn
+python-dotenv
+google-generativeai
+pydantic
+faster-whisper
+docxtpl
+python-multipart
